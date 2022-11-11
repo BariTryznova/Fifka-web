@@ -1,0 +1,138 @@
+html { box-sizing: border-box; } 
+
+*, ::after, ::before { box-sizing: inherit; } 
+
+body {
+    margin: 0;
+}
+
+.container {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'News Cycle', sans-serif;
+}
+
+$zelena: #3B5438;
+$bezova: #CAAC85;
+$stribrna: #C9C5C2;
+
+
+/* header */ 
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $zelena;
+    margin: 0;
+    border-bottom: 3px solid $bezova;
+    
+}
+
+.header h3 {
+    font-size: 30px;
+    color: white;
+    margin-left: 40px;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+
+/* hero section */ 
+
+.hero {
+    background-image: url(images/Homepage-image.jpeg);
+    color: white;
+    min-height: 220px;
+}
+
+.hero h1 {
+    margin: 0 60px;
+    padding-top: 40px;
+    font-size: 30px;
+    text-align: right;
+}
+
+.highlight {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+
+/* section introduction */
+
+.introduction {
+    background-color: $stribrna;
+    position: relative;
+}
+
+.introduction h1 {
+    margin: 0 20px 20px 20px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.introduction p {
+    text-align: center;
+    padding-bottom: 50px;
+    margin: 0 50px;
+}
+
+.introduction h3 {
+    font-size: 18px;
+    text-align: center;
+    margin: 0 60px 20px 60px;
+}
+
+.introduction img {
+    max-width: 400px;
+    position: absolute;
+    left: 100px;
+    top: 240px;
+    border-radius: 5%;
+    box-shadow: lightgrey 4px 6px 10px;
+}
+
+/* section icons */
+
+.ikona {
+    max-width: 100px;
+    fill: $zelena;
+    max-height: 100px;
+}
+
+.box {
+    box-shadow: lightgrey 4px 6px 10px;
+    max-width: 300px;
+    border-radius: 5%;
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.ekologicky {
+    margin-top: 220px;
+}
+
+.box h3 {
+    color: $zelena;
+}
+
+/* section specific */
+
+.specific {
+    margin-top: 30px;
+    text-align: left;
+    padding: 30px 60px;
+    background-color: $zelena;
+    color: white;
+}
+
+.specific h3 {
+    margin-left: 38px;
+}
