@@ -7,26 +7,41 @@ body {
 }
 
 .container {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     font-family: 'News Cycle', sans-serif;
 }
 
+
+
+
+
 $zelena: #3B5438;
 $bezova: #CAAC85;
 $stribrna: #C9C5C2;
+$margin-strany: 60px;
 
 
 /* header */ 
 
 .header {
+    background-color: $zelena;
+    border-bottom: 3px solid $bezova;
+}
+
+.header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $zelena;
     margin: 0;
-    border-bottom: 3px solid $bezova;
-    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 900px) {
+    .header__inner {
+        max-width: 1400px;
+    }
 }
 
 .header h3 {
@@ -35,15 +50,26 @@ $stribrna: #C9C5C2;
     margin-left: 40px;
 }
 
-.menu a {
+.header__menu a {
     text-decoration: none;
+    color: white;
+    margin: 15px;
+}
+
+.header__menu a:hover, .header__menu a:active {
+    color: $bezova;
+    font-size: 18px;
+}
+
+.header__menu--margin {
+    margin-right: 60px;
 }
 
 
 /* hero section */ 
 
 .hero {
-    background-image: url(images/Homepage-image.jpeg);
+    background-image: url(/images/Homepage-image.jpeg);
     color: white;
     min-height: 220px;
 }
@@ -60,19 +86,30 @@ $stribrna: #C9C5C2;
     font-size: 35px;
 }
 
+@media (min-width: 900px) {
+    .hero__inner {
+        max-width: 1400px;
+    }
+
+    .hero__inner h1 {
+        margin:0;
+    }
+}
+
 
 /* section introduction */
 
 .introduction {
     background-color: $stribrna;
     position: relative;
+    min-height: 420px;
 }
 
 .introduction h1 {
     margin: 0 20px 20px 20px;
     padding-top: 20px;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .introduction p {
@@ -82,18 +119,54 @@ $stribrna: #C9C5C2;
 }
 
 .introduction h3 {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     margin: 0 60px 20px 60px;
 }
 
-.introduction img {
+.introduction__image {
     max-width: 400px;
     position: absolute;
-    left: 100px;
-    top: 240px;
-    border-radius: 5%;
+    left: calc((100% - 400px) / 2);
+    top: 270px;
+    border-radius: 15px;
     box-shadow: lightgrey 4px 6px 10px;
+}
+
+@media (min-width: 640px) {
+    .introduction {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        min-height: 300px;
+    }
+
+    .introduction__image {
+        max-width: 250px;
+        max-height: 130px;
+        flex: 1 1 30%;
+        position: static;
+        align-self: center;
+        margin-right: $margin-strany;
+    }
+
+    .introduction__inner {
+        flex: 1 1 30%;
+        margin-top: 30px;
+        margin-left: $margin-strany;
+    }
+}
+
+@media (min-width: 780px) {
+    .introduction__inner h1, .introduction__inner p, .introduction__inner h3 {
+        text-align: right;
+        margin-right: $margin-strany;
+    }
+
+    .introduction__image {
+        max-width: 400px;
+        max-height: 230px;
+    }
 }
 
 /* section icons */
@@ -106,13 +179,13 @@ $stribrna: #C9C5C2;
 
 .box {
     box-shadow: lightgrey 4px 6px 10px;
-    max-width: 300px;
     border-radius: 5%;
     margin-left: auto; 
     margin-right: auto; 
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+    max-width: 250px;
 }
 
 .ekologicky {
@@ -121,6 +194,51 @@ $stribrna: #C9C5C2;
 
 .box h3 {
     color: $zelena;
+}
+
+@media (min-width: 640px) {
+    .icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ekologicky {
+        margin-top: 20px;
+    }
+
+    .kvalitni, .ekonomicky {
+        margin-right: $margin-strany;
+        margin-left: 30px;
+    }
+
+    .udrzitelna, .ekologicky {
+        margin-left:  $margin-strany;
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: 780px) {
+    .box {
+        max-width: 350px;
+    }
+}
+
+@media (min-width: 900px) {
+    .icons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .box {
+        margin: 30px 15px;
+    }
+    
+    .ekologicky {
+        margin-left: $margin-strany;
+    }
+
+    .kvalitni {
+        margin-right: $margin-strany;
+    }
 }
 
 /* section specific */
@@ -135,4 +253,21 @@ $stribrna: #C9C5C2;
 
 .specific h3 {
     margin-left: 38px;
+}
+
+// section footer
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.footer__image {
+    max-width: 100px;
+    margin: 30px 0 30px 60px;
+    justify-self: center;
+}
+
+.footer p {
+    margin: 30px $margin-strany 0 30px;
 }
