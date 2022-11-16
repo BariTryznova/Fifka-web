@@ -61,10 +61,9 @@ $margin-strany: 60px;
     font-size: 18px;
 }
 
-.header__menu--margin {
+.header__menu:last-child {
     margin-right: 60px;
 }
-
 
 /* hero section */ 
 
@@ -89,20 +88,23 @@ $margin-strany: 60px;
 @media (min-width: 900px) {
     .hero__inner {
         max-width: 1400px;
-    }
-
-    .hero__inner h1 {
-        margin:0;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 
 /* section introduction */
 
-.introduction {
+.obal-introduction {
     background-color: $stribrna;
-    position: relative;
+}
+.introduction {
     min-height: 420px;
+}
+
+.introduction {
+    position: relative;
 }
 
 .introduction h1 {
@@ -167,6 +169,26 @@ $margin-strany: 60px;
         max-width: 400px;
         max-height: 230px;
     }
+
+    .introduction p {
+        font-size: 18px;
+    }
+
+    .introduction h3 {
+        font-size: 20px;
+    }
+
+    .introduction h1 {
+        font-size: 30;
+    }
+}
+
+@media (min-width: 900px) {
+    .introduction {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* section icons */
@@ -226,6 +248,9 @@ $margin-strany: 60px;
 @media (min-width: 900px) {
     .icons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .box {
@@ -247,12 +272,23 @@ $margin-strany: 60px;
     margin-top: 30px;
     text-align: left;
     padding: 30px 60px;
-    background-color: $zelena;
     color: white;
+}
+
+.obal-specific {
+    background-color: $zelena;
 }
 
 .specific h3 {
     margin-left: 38px;
+}
+
+@media (min-width: 900px) {
+    .specific {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 // section footer
