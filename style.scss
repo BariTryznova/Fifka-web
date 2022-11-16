@@ -17,7 +17,7 @@ body {
 
 
 $zelena: #3B5438;
-$bezova: #CAAC85;
+$bezova: #BE9577;
 $stribrna: #C9C5C2;
 $margin-strany: 60px;
 
@@ -54,11 +54,12 @@ $margin-strany: 60px;
     text-decoration: none;
     color: white;
     margin: 15px;
+    font-size: 18px;
 }
 
 .header__menu a:hover, .header__menu a:active {
     color: $bezova;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .header__menu:last-child {
@@ -251,6 +252,7 @@ $margin-strany: 60px;
         width: 1400px;
         margin-left: auto;
         margin-right: auto;
+        font-size: 18px;
     }
 
     .box {
@@ -289,6 +291,14 @@ $margin-strany: 60px;
         margin-left: auto;
         margin-right: auto;
     }
+
+    .specific h3 {
+        font-size: 25px;
+    }
+
+    .specific li {
+        font-size: 18px;
+    }
 }
 
 // section footer
@@ -300,7 +310,7 @@ $margin-strany: 60px;
 
 .footer__image {
     max-width: 100px;
-    margin: 30px 0 30px 60px;
+    margin: 30px 0 30px 90px;
     justify-self: center;
 }
 

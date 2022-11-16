@@ -19,7 +19,7 @@ body {
 /* header */
 .header {
   background-color: #3B5438;
-  border-bottom: 3px solid #CAAC85;
+  border-bottom: 3px solid #BE9577;
 }
 
 .header__inner {
@@ -46,11 +46,12 @@ body {
   text-decoration: none;
   color: white;
   margin: 15px;
+  font-size: 18px;
 }
 
 .header__menu a:hover, .header__menu a:active {
-  color: #CAAC85;
-  font-size: 18px;
+  color: #BE9577;
+  font-size: 22px;
 }
 
 .header__menu:last-child {
@@ -225,6 +226,7 @@ body {
     width: 1400px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 18px;
   }
   .box {
     margin: 30px 15px;
@@ -258,6 +260,12 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+  .specific h3 {
+    font-size: 25px;
+  }
+  .specific li {
+    font-size: 18px;
+  }
 }
 .footer {
   display: grid;
@@ -266,7 +274,7 @@ body {
 
 .footer__image {
   max-width: 100px;
-  margin: 30px 0 30px 60px;
+  margin: 30px 0 30px 90px;
   justify-self: center;
 }
 
