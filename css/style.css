@@ -285,4 +285,18 @@ body {
 .kontejner-boxes_item {
   background-color: #3B5438;
   color: white;
+}
+
+.container-realizace__boxes {
+  text-align: center;
+}
+
+.container-realizace__grid {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .container-realizace__grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */

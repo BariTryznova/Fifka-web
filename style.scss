@@ -324,3 +324,20 @@ $margin-strany: 60px;
     background-color: $zelena;
     color: white;
 } 
+
+// Realizace
+
+.container-realizace__boxes {
+    text-align: center;
+}
+
+.container-realizace__grid {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+    .container-realizace__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
