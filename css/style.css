@@ -280,4 +280,9 @@ body {
 
 .footer p {
   margin: 30px 60px 0 30px;
+}
+
+.kontejner-boxes_item {
+  background-color: #3B5438;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
