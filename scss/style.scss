@@ -1,70 +1,7 @@
-html { box-sizing: border-box; } 
-
-*, ::after, ::before { box-sizing: inherit; } 
-
-body {
-    margin: 0;
-}
-
-.container {
-    font-size: 15px;
-    font-weight: 400;
-    font-family: 'News Cycle', sans-serif;
-}
-
-
-
-
-
-$zelena: #3B5438;
-$bezova: #BE9577;
-$stribrna: #C9C5C2;
-$margin-strany: 60px;
-
-
-/* header */ 
-
-.header {
-    background-color: $zelena;
-    border-bottom: 3px solid $bezova;
-}
-
-.header__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (min-width: 900px) {
-    .header__inner {
-        max-width: 1400px;
-    }
-}
-
-.header h3 {
-    font-size: 30px;
-    color: white;
-    margin-left: 40px;
-}
-
-.header__menu a {
-    text-decoration: none;
-    color: white;
-    margin: 15px;
-    font-size: 18px;
-}
-
-.header__menu a:hover, .header__menu a:active {
-    color: $bezova;
-    font-size: 22px;
-}
-
-.header__menu:last-child {
-    margin-right: 60px;
-}
+@use '/scss/main/main';  
+@use '/scss/base/typography';
+@use '/scss/helpers/variables';  
+@use '/scss/layout/header';
 
 /* hero section */ 
 
@@ -112,7 +49,6 @@ $margin-strany: 60px;
     margin: 0 20px 20px 20px;
     padding-top: 20px;
     text-align: center;
-    font-size: 20px;
 }
 
 .introduction p {
@@ -169,18 +105,6 @@ $margin-strany: 60px;
     .introduction__image {
         max-width: 400px;
         max-height: 230px;
-    }
-
-    .introduction p {
-        font-size: 18px;
-    }
-
-    .introduction h3 {
-        font-size: 20px;
-    }
-
-    .introduction h1 {
-        font-size: 30;
     }
 }
 
@@ -303,41 +227,12 @@ $margin-strany: 60px;
 
 // section footer
 
-.footer {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-}
-
-.footer__image {
-    max-width: 100px;
-    margin: 30px 0 30px 90px;
-    justify-self: center;
-}
-
-.footer p {
-    margin: 30px $margin-strany 0 30px;
-}
+@use '/scss/layout/footer';
 
 // Co deláme stránnka - container-boxes
 
-.kontejner-boxes_item {
-    background-color: $zelena;
-    color: white;
-} 
+@use '/scss/pages/codelame';
 
 // Realizace
 
-.container-realizace__boxes {
-    text-align: center;
-}
-
-.container-realizace__grid {
-    grid-template-columns: 1fr;
-}
-
-@media (min-width: 640px) {
-    .container-realizace__grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
+@use '/scss/pages/realizace';
